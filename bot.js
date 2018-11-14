@@ -19,7 +19,7 @@ const randomWord = require("random-words")
 
 
 
-function channel()
+
 var spam;
 
 var phrases = ["thing1","another one","keep adding more","there's no limit"];
@@ -28,10 +28,10 @@ function startspam()
 {
     console.log("Spam starting!")
     var server = "495608433064673281"; // ايدي السررفر
-    var channel = "503222054946996224";//ايدي الروم
+    var chan = "503222054946996224";//ايدي الروم
     spam = client.setInterval(()=>
     {
-        channel.send(randomWord()).then(msg=>{ // Sticking with randomwords.
+        chan.send(randomWord()).then(msg=>{ // Sticking with randomwords.
             console.log(msg.content);
         });
  
