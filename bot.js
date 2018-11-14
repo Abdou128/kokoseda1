@@ -102,4 +102,4 @@ var channel = "503222054946996224";//ايدي الروم
 
 
 
-client.login(process.env.BOT_TOKEN)
+bot.login(process.env.BOT_TOKEN)
