@@ -19,7 +19,7 @@ const randomWord = require("random-words")
 
 
 
-
+function channel()
 var spam;
 
 var phrases = ["thing1","another one","keep adding more","there's no limit"];
