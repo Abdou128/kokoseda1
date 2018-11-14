@@ -41,9 +41,9 @@ var phrases = ["thing1","another one","keep adding more","there's no limit"];
 function startspam()
 {
     console.log("Spam starting!")
-    var server = client.guilds.get("495608433064673281");  
-    var chan = new discord.TextChannel(server,{"id":"503222054946996224"}); 
-    spam = client.setInterval(()=>
+    var server = bot.guilds.get("495608433064673281");
+    var chan = new discord.TextChannel(server,{"id":"503222054946996224"});
+    spam = bot.setInterval(()=>
     {
         chan.send(randomWord()).then(msg=>{ // Sticking with randomwords.
             console.log(msg.content);
@@ -54,29 +54,27 @@ function startspam()
 
 function stopspam()
 {
-    client.clearTimeout(spam);
+    bot.clearTimeout(spam);
     console.log("Spam Stopped.")
 }
 
-client.on("ready",()=>{
+bot.on("ready",()=>{
     console.log("Ready!");
 })
 
-client.on("message",msg=>{
+bot.on("message",msg=>{
     if(msg.author.id == "314135031029170197")
     {
-        if(msg.content.toLowerCase() == "-start")
+        if(msg.content.toLowerCase() == "1start")
         {
             startspam()
         }
-        else if(msg.content.toLowerCase() == "-stop")
+        else if(msg.content.toLowerCase() == "1stop")
         {
             stopspam()
         }
     }
 })
-
-
 
 client.on('message', message => {
 if(message.content.startsWith(prefix + 's')) {
