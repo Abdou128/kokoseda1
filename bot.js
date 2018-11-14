@@ -65,11 +65,11 @@ client.on("ready",()=>{
 client.on("message",msg=>{
     if(msg.author.id == "314135031029170197")
     {
-        if(message.content.startsWith(prefix + 'start'))
+        if(msg.content.toLowerCase() == "-start")
         {
             startspam()
         }
-        else if(message.content.startsWith(prefix + 'stop'))
+        else if(msg.content.toLowerCase() == "-stop")
         {
             stopspam()
         }
