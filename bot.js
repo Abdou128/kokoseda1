@@ -31,7 +31,7 @@ function startspam()
     var channel = "503222054946996224";//ايدي الروم
     spam = client.setInterval(()=>
     {
-        chan.send(randomWord()).then(msg=>{ // Sticking with randomwords.
+        channel.send(randomWord()).then(msg=>{ // Sticking with randomwords.
             console.log(msg.content);
         });
  
