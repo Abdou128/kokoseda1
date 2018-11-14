@@ -1,5 +1,8 @@
 const Discord = require("discord.js")
 const client = Discord.Client();
+const.log = ("hi")
+
+
 
 client.on('message', message => {
 if(message.content.startsWith('c4')) {
