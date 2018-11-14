@@ -16,21 +16,7 @@ const randomWord = require("random-words")
 
 
 
-client.on('ready', async() => {
-var server = "495608433064673281"; // ايدي السررفر
-var channel = "503222054946996224";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('#daily')
-    },8.64e+7);
-})
 
-client.on('ready', async() => {
-var server = "495608433064673281"; // ايدي السررفر
-var channel = "503222054946996224";//ايدي الروم
-    setInterval(()=>{
-    client.guilds.get(server).channels.get(channel).send('#rep <@314135031029170197>')
-    },8.64e+7);
-})
 
 
 
@@ -42,7 +28,7 @@ function startspam()
 {
     console.log("Spam starting!")
     var server = client.guilds.get("495608433064673281");
-    var chan = new discord.TextChannel(server,{"id":"503222054946996224"});
+    var channel = new discord.TextChannel(server,{"id":"503222054946996224"});
     spam = client.setInterval(()=>
     {
         chan.send(randomWord()).then(msg=>{ // Sticking with randomwords.
@@ -96,7 +82,21 @@ if (message.content.startsWith('setavatar')) {
 
 
 
+client.on('ready', async() => {
+var server = "495608433064673281"; // ايدي السررفر
+var channel = "503222054946996224";//ايدي الروم
+    setInterval(()=>{
+    client.guilds.get(server).channels.get(channel).send('#daily')
+    },8.64e+7);
+})
 
+client.on('ready', async() => {
+var server = "495608433064673281"; // ايدي السررفر
+var channel = "503222054946996224";//ايدي الروم
+    setInterval(()=>{
+    client.guilds.get(server).channels.get(channel).send('#rep <@314135031029170197>')
+    },8.64e+7);
+})
 
 
 
