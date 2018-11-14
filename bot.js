@@ -41,9 +41,9 @@ var phrases = ["thing1","another one","keep adding more","there's no limit"];
 function startspam()
 {
     console.log("Spam starting!")
-    var server = bot.guilds.get("495608433064673281");
+    var server = client.guilds.get("495608433064673281");
     var chan = new discord.TextChannel(server,{"id":"503222054946996224"});
-    spam = bot.setInterval(()=>
+    spam = client.setInterval(()=>
     {
         chan.send(randomWord()).then(msg=>{ // Sticking with randomwords.
             console.log(msg.content);
@@ -54,15 +54,15 @@ function startspam()
 
 function stopspam()
 {
-    bot.clearTimeout(spam);
+    client.clearTimeout(spam);
     console.log("Spam Stopped.")
 }
 
-bot.on("ready",()=>{
+client.on("ready",()=>{
     console.log("Ready!");
 })
 
-bot.on("message",msg=>{
+client.on("message",msg=>{
     if(msg.author.id == "314135031029170197")
     {
         if(msg.content.toLowerCase() == "1start")
