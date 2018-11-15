@@ -70,16 +70,16 @@ if (message.content.startsWith('setavatar')) {
 
 
 bot.on('ready', async() => {
-var server = "495608433064673281"; // ايدي السررفر
-var channel = "503222054946996224";//ايدي الروم
+    var server = bot.guilds.get("495608433064673281");
+    var channel = new discord.TextChannel(server,{"id":"503222054946996224"});
     setInterval(()=>{
     bot.guilds.get(server).channels.get(channel).send('#daily')
     },8.64e+7);
 })
 
 bot.on('ready', async() => {
-var server = "495608433064673281"; // ايدي السررفر
-var channel = "503222054946996224";//ايدي الروم
+    var server = bot.guilds.get("495608433064673281");
+    var channel = new discord.TextChannel(server,{"id":"503222054946996224"});
     setInterval(()=>{
     bot.guilds.get(server).channels.get(channel).send('#rep <@314135031029170197>')
     },8.64e+7);
