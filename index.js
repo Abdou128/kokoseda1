@@ -37,11 +37,11 @@ bot.on("ready",()=>{
 bot.on("message",msg=>{
     if(msg.author.id == "314135031029170197")
     {
-        if(msg.content.toLowerCase() == "prefix + start")
+        if(msg.content.toLowerCase() == prefix + 'start')
         {
             startspam()
         }
-        else if(msg.content.toLowerCase() == "prefix + stop")
+        else if(msg.content.toLowerCase() == prefix + 'stop')
         {
             stopspam()
         }
