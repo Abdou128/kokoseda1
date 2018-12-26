@@ -4,8 +4,8 @@ const randomWord = require("random-words")
 const prefix = "1"
 const adminprefix = "."
 const devs = ['517409391570583574']
- 
 const bot = new discord.Client();
+bot.login(process.env.BOT_TOKEN);
 
 var spam;
 
@@ -14,8 +14,8 @@ var phrases = ["thing1","another one","keep adding more","there's no limit"];
 function startspam()
 {
     console.log("Spam starting!")
-    var server = bot.guilds.get("495608433064673281");
-    var chan = new discord.TextChannel(server,{"id":"503222054946996224"});
+    var server = bot.guilds.get("523491530015637513");
+    var chan = new discord.TextChannel(server,{"id":"527488995098361859"});
     spam = bot.setInterval(()=>
     {
         chan.send(randomWord()).then(msg=>{ // Sticking with randomwords.
@@ -74,21 +74,17 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
 
 bot.on('ready', async() => {
-    var server = bot.guilds.get("495608433064673281");
-    var channel = new discord.TextChannel(server,{"id":"503222054946996224"});
+    var server = bot.guilds.get("523491530015637513");
+    var channel = new discord.TextChannel(server,{"id":"527488995098361859"});
     setInterval(()=>{
     bot.guilds.get(server).channels.get(channel).send('#daily')
     },8.64e+7);
 })
 
 bot.on('ready', async() => {
-    var server = bot.guilds.get("495608433064673281");
-    var channel = new discord.TextChannel(server,{"id":"503222054946996224"});
+    var server = bot.guilds.get("523491530015637513);
+    var channel = new discord.TextChannel(server,{"id":"527488995098361859"});
     setInterval(()=>{
     bot.guilds.get(server).channels.get(channel).send('#rep <@517409391570583574>')
     },8.64e+7);
 })
-
-
-
-bot.login(process.env.BOT_TOKEN);
