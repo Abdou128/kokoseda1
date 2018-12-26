@@ -88,3 +88,4 @@ bot.on('ready', async() => {
     bot.guilds.get(server).channels.get(channel).send('#rep <@517409391570583574>')
     },8.64e+7);
 })
+});
