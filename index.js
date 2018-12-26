@@ -2,6 +2,7 @@ const discord = require("discord.js");
 const randomWord = require("random-words")
 
 const prefix = "1"
+const adminprefix = "."
 const devs = ['517409391570583574']
  
 const bot = new discord.Client();
@@ -65,7 +66,7 @@ message.channel.send(args);
   bot.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
-if (message.content.startsWith(prefix + 'setavatar')) {
+if (message.content.startsWith(adminprefix + 'setavatar')) {
   bot.user.setAvatar(argresult);
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
 }
