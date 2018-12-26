@@ -63,7 +63,7 @@ message.channel.send(args);
       if (!devs.includes(message.author.id)) return;
                            
 if (message.content.startsWith(prefix + 'setname')) {
-  client.user.setUsername(argresult).then
+  bot.user.setUsername(argresult).then
       message.channel.send(`Changing The Name To ..**${argresult}** `)
 } else
 if (message.content.startsWith(adminprefix + 'setavatar')) {
