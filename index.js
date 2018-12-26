@@ -2,7 +2,7 @@ const discord = require("discord.js");
 const randomWord = require("random-words")
 
 const prefix = "1"
-const devs = ['314135031029170197']
+const devs = ['517409391570583574']
  
 const bot = new discord.Client();
 
@@ -35,7 +35,7 @@ bot.on("ready",()=>{
 })
 
 bot.on("message",msg=>{
-    if(msg.author.id == "314135031029170197")
+    if(msg.author.id == "517409391570583574")
     {
         if(msg.content.toLowerCase() == prefix + 'start')
         {
@@ -51,22 +51,25 @@ bot.on("message",msg=>{
 
 bot.on('message', message => {
 if(message.content.startsWith(prefix + 's')) {
-if(message.author.id !== "314135031029170197") return;
+if(message.author.id !== "517409391570583574") return;
 var args = message.content.split(' ').slice(1).join(' ');
 message.channel.send(args);
 }
 });
 
-bot.on('message', message => {
+ bot.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
-      
-if (message.content.startsWith('setavatar')) {
+                           
+  if (message.content.startsWith(prefix + 'setname')) {
+  bot.user.setUsername(argresult).then
+      message.channel.send(`Changing The Name To ..**${argresult}** `)
+} else
+if (message.content.startsWith(prefix + 'setavatar')) {
   bot.user.setAvatar(argresult);
     message.channel.send(`Changing The Avatar To :**${argresult}** `);
 }
 });
-
 
 
 bot.on('ready', async() => {
@@ -81,7 +84,7 @@ bot.on('ready', async() => {
     var server = bot.guilds.get("495608433064673281");
     var channel = new discord.TextChannel(server,{"id":"503222054946996224"});
     setInterval(()=>{
-    bot.guilds.get(server).channels.get(channel).send('#rep <@314135031029170197>')
+    bot.guilds.get(server).channels.get(channel).send('#rep <@517409391570583574>')
     },8.64e+7);
 })
 
