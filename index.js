@@ -82,7 +82,7 @@ bot.on('ready', async() => {
 })
 
 bot.on('ready', async() => {
-    var server = bot.guilds.get("523491530015637513);
+    var server = bot.guilds.get("523491530015637513");
     var channel = new discord.TextChannel(server,{"id":"527488995098361859"});
     setInterval(()=>{
     bot.guilds.get(server).channels.get(channel).send('#rep <@517409391570583574>')
