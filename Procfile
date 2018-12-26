@@ -1,2 +1,10 @@
-worker: node bot.js
-worker2: node index.js
+worker: node index.js
+worker2: node index2.js
+worker3: node index3.js
+worker4: node index4.js
+worker5: node index5.js
+worker6: node index6.js
+worker7: node index7.js
+worker8: node index8.js
+worker9: node index9.js
+worker10: node index10.js
