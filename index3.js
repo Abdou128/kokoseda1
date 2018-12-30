@@ -6,6 +6,8 @@ const adminprefix = "."
 const devs = ['517409391570583574']
 const bot = new discord.Client();
 bot.login(process.env.BOT_TOKEN23);
+bot.login(process.env.BOT_TOKEN22);
+bot.login(process.env.BOT_TOKEN21);
 
 var spam;
 
