@@ -15,7 +15,6 @@ bot.login(process.env.BOT_TOKEN7);
 bot.login(process.env.BOT_TOKEN8);
 bot.login(process.env.BOT_TOKEN9);
 bot.login(process.env.BOT_TOKEN10);
-bot.login(process.env.BOT_TOKEN11);
 
 var spam;
 
